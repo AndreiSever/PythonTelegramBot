@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module BotTelegramm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>BotTelegramm</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5C5_tele_bot%5Cbottelegramm.py">c:\users\5_tele_bot\bottelegramm.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="BotTelegramm.html#BotTelegramm">BotTelegramm</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BotTelegramm">class <strong>BotTelegramm</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Класс&nbsp;<a href="#BotTelegramm">BotTelegramm</a>.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BotTelegramm-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Инициализирует&nbsp;переменные.<br>
+&nbsp;<br>
+Атрибуты<br>
+--------<br>
+TokenTelegramm&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Токен&nbsp;telegramm.&nbsp;(Значение&nbsp;'')<br>
+TokenWeather&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Токен&nbsp;openweathermap.&nbsp;(Значение&nbsp;'')<br>
+update&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;последнего&nbsp;обновления&nbsp;сообщения&nbsp;telegramm.&nbsp;(Значение&nbsp;0)</tt></dd></dl>
+
+<dl><dt><a name="BotTelegramm-main"><strong>main</strong></a>(self)</dt><dd><tt>Основная&nbsp;функция.<br>
+&nbsp;<br>
+Ошибки<br>
+------<br>
+Exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;при&nbsp;обращении&nbsp;по&nbsp;ключю&nbsp;в&nbsp;словаре.<br>
+OSError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает,&nbsp;если&nbsp;произошла&nbsp;сетевая&nbsp;ошибка.<br>
+IOError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;при&nbsp;ошибке&nbsp;чтения&nbsp;файла.</tt></dd></dl>
+
+<dl><dt><a name="BotTelegramm-queryDB"><strong>queryDB</strong></a>(self, user, date)</dt><dd><tt>Делает&nbsp;запрос&nbsp;к&nbsp;базе&nbsp;данных.<br>
+&nbsp;<br>
+Параметры<br>
+---------<br>
+user&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;пользователя.<br>
+date&nbsp;:&nbsp;date_time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Время&nbsp;обращения.<br>
+&nbsp;<br>
+Возврат<br>
+-------<br>
+info&nbsp;:&nbsp;array_like<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Массив&nbsp;с&nbsp;выборкой&nbsp;из&nbsp;базы&nbsp;данных.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;False&nbsp;при&nbsp;вставке&nbsp;в&nbsp;базу&nbsp;данных.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;True&nbsp;при&nbsp;ошибке.<br>
+&nbsp;<br>
+Ошибки<br>
+------<br>
+sqlite3.Error<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;при&nbsp;создании,&nbsp;подключении&nbsp;или&nbsp;чтении&nbsp;базы&nbsp;данных.</tt></dd></dl>
+
+<dl><dt><a name="BotTelegramm-showDB"><strong>showDB</strong></a>(self)</dt><dd><tt>Выводит&nbsp;информацию&nbsp;из&nbsp;базы&nbsp;данных.<br>
+&nbsp;<br>
+Возврат<br>
+-------<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;False.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;True&nbsp;при&nbsp;ошибке.</tt></dd></dl>
+
+<dl><dt><a name="BotTelegramm-telegramm"><strong>telegramm</strong></a>(self, do)</dt><dd><tt>Делает&nbsp;запрос&nbsp;к&nbsp;telegramm.<br>
+&nbsp;<br>
+Параметры<br>
+---------<br>
+do&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Параметры&nbsp;для&nbsp;вставки&nbsp;в&nbsp;ссылки&nbsp;запроса.<br>
+&nbsp;<br>
+Возврат<br>
+-------<br>
+array_like<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ответ&nbsp;от&nbsp;сервера.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;False&nbsp;если&nbsp;ошибка.<br>
+&nbsp;<br>
+Ошибки<br>
+------<br>
+requests.exceptions.RequestException<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;при&nbsp;отправке&nbsp;get&nbsp;запроса.<br>
+r.status_code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;если&nbsp;не&nbsp;существует&nbsp;метода.</tt></dd></dl>
+
+<dl><dt><a name="BotTelegramm-telegramm_exec"><strong>telegramm_exec</strong></a>(self, chat, text)</dt><dd><tt>Выполняет&nbsp;запрос&nbsp;к&nbsp;telegramm&nbsp;в&nbsp;зависимости&nbsp;от&nbsp;текста&nbsp;сообщения.<br>
+&nbsp;<br>
+Параметры<br>
+---------<br>
+chat&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;чата.<br>
+text&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Текста&nbsp;сообщения.<br>
+&nbsp;<br>
+Возврат<br>
+-------<br>
+answer&nbsp;:&nbsp;array_like<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Статус&nbsp;запроса&nbsp;к&nbsp;телеграмм.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;True,&nbsp;если&nbsp;команда&nbsp;не&nbsp;была&nbsp;найдена.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;False&nbsp;при&nbsp;неверном&nbsp;запросе.</tt></dd></dl>
+
+<dl><dt><a name="BotTelegramm-temperature"><strong>temperature</strong></a>(self)</dt><dd><tt>Делает&nbsp;запрос&nbsp;к&nbsp;openweathermap.<br>
+&nbsp;<br>
+Возврат<br>
+-------<br>
+string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Температура.<br>
+bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возвращает&nbsp;False&nbsp;при&nbsp;ошибке.<br>
+&nbsp;<br>
+Ошибки<br>
+------<br>
+requests.exceptions.RequestException<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;при&nbsp;отправке&nbsp;get&nbsp;запроса.<br>
+Exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;при&nbsp;обращении&nbsp;по&nbsp;ключю&nbsp;в&nbsp;словаре.<br>
+r.status_code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Возникает&nbsp;если&nbsp;запрос&nbsp;выполнен&nbsp;не&nbsp;успешно.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
